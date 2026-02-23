@@ -16,15 +16,7 @@ Please follow the steps below to maintain clean and professional workflow standa
 
 # 🔄 Contribution Workflow (Step-by-Step)
 
-## 1️⃣ Fork the Repository
-
-Click on the **Fork** button (top right corner of this repo).
-
-This will create your own copy of the repository in your GitHub account.
-
----
-
-## 2️⃣ Clone Your Forked Repository
+## 1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/REPOSITORY-NAME.git
@@ -33,17 +25,16 @@ cd REPOSITORY-NAME
 
 ---
 
-## 3️⃣ Add Original Repository as Upstream (Recommended)
+## 2️⃣ Sync with main
 
-```bash
-git remote add upstream https://github.com/ORIGINAL-OWNER/REPOSITORY-NAME.git
-```
+Go to the repository on GitHub
 
-To keep your fork updated:
+---
 
-```bash
-git pull upstream main
-```
+## 3️⃣ Branch Banane Se Pehle Main Sync Add Karo (Important)
+
+git checkout main
+git pull origin main
 
 ---
 
@@ -148,19 +139,6 @@ Closes #issue-number (if any)
 - ❌ No large unrelated changes in one PR
 - ✅ One feature = One PR
 - ✅ Keep PR small and focused
-
----
-
-# ⭐ Keep Your Fork Updated
-
-Before creating a new PR:
-
-```bash
-git checkout main
-git pull upstream main
-git checkout feature/your-feature-name
-git merge main
-```
 
 ---
 
