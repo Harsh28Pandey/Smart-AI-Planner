@@ -1,6 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+    const navigate = useNavigate()
+
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[94%] max-w-6xl z-50 bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.37)] rounded-3xl px-10 py-4 flex justify-between items-center transition-all duration-300">
 
@@ -23,11 +26,15 @@ const Navbar = () => {
             </div>
 
             <div className="hidden md:flex space-x-4">
-                <button className="text-yellow-400 hover:text-white transition cursor-pointer">
+                <button className="text-yellow-400 hover:text-white transition cursor-pointer"
+                    onClick={() => navigate("/login")}
+                >
                     Login
                 </button>
 
-                <button className="px-6 py-2 rounded-xl bg-linear-to-r from-orange-500 via-purple-500 to-blue-500 hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer">
+                <button className="px-6 py-2 rounded-xl bg-linear-to-r from-orange-500 via-purple-500 to-blue-500 hover:scale-105 transition-all duration-300 shadow-lg cursor-pointer"
+                    onClick={() => navigate("/signup")}
+                >
                     Get Started
                 </button>
             </div>
